@@ -50,7 +50,7 @@ class ProductController
 
     public function getIdPlatform($platform)
     {
-        $stmt = $this->conn->prepare("SELECT Id FROM PLATAFORMA WHERE Nombre = :name");
+        $stmt = $this->conn->prepare("SELECT id FROM plataforma WHERE nombre = :name");
         $stmt->bindParam(':name', $platform);
         $stmt->execute();
         $idPlatform = $stmt->fetchColumn();
@@ -94,7 +94,7 @@ class ProductController
 
     public function isAlredyCreated($productName)
     {
-        $stmt = $this->conn->prepare("Select idProducto FROM PRoducto Where Nombre = :name");
+        $stmt = $this->conn->prepare("Select IdProducto FROM producto Where Nombre = :name");
         $stmt->bindParam(':name', $productName);
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
@@ -141,7 +141,7 @@ class ProductController
         } else {
             try {
                 // Prepare the sql to instert data
-                $sqlInsert = "INSERT INTO PRODUCTO (`Nombre`, `Descripcion`, `Stock`, `Precio`, `Oferta`) 
+                $sqlInsert = "INSERT INTO producto (`Nombre`, `Descripcion`, `Stock`, `Precio`, `Oferta`) 
                 VALUES (:name , :description, :stock, :price, :offer)";
                 $stmt = $this->conn->prepare($sqlInsert);
                 $stmt->bindParam(':name', $productName);
@@ -263,7 +263,7 @@ class ProductController
             exit();
         } else {
             try {
-                $updateProductQuery = "UPDATE Producto SET Nombre = :name, Descripcion = :description, Stock = :stock, Oferta = :offert, Precio = :price WHERE idProducto = :idProduct";
+                $updateProductQuery = "UPDATE producto SET Nombre = :name, Descripcion = :description, Stock = :stock, Oferta = :offert, Precio = :price WHERE IdProducto = :idProduct";
                 $stmt = $this->conn->prepare($updateProductQuery);
                 $stmt->bindParam(':name', $productName);
                 $stmt->bindParam(':description', $productDescription);
@@ -332,7 +332,7 @@ class ProductController
             $trend = 0;
         }
         try {
-            $stmt = $this->conn->prepare("INSERT INTO Producto_Plataforma (id_producto, id_plataforma, Imagen, Tendencia) VALUES (:idProduct, :idPlatform, :file, :trend)");
+            $stmt = $this->conn->prepare("INSERT INTO producto_plataforma (id_producto, id_plataforma, Imagen, Tendencia) VALUES (:idProduct, :idPlatform, :file, :trend)");
             $stmt->bindParam(':idProduct', $idProduct);
             $stmt->bindParam(':idPlatform', $idPlatform);
             $stmt->bindParam(':file', $file);
@@ -356,7 +356,7 @@ class ProductController
     {
         $idProduct = $_POST['productName'];
         try {
-            $stmt = $this->conn->prepare("DELETE FROM Producto WHERE idProducto = :idProduct");
+            $stmt = $this->conn->prepare("DELETE FROM producto WHERE IdProducto = :idProduct");
             $stmt->bindParam(':idProduct', $idProduct);
             $stmt->execute();
             if ($stmt->rowCount() > 0) {

@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 class UserController
 {
+
     private $conn;
     // Constructor de la clase UserController
     public function __construct()
@@ -112,7 +113,7 @@ class UserController
         // Update password alredy created to hash
         $newHashedPassword = password_hash($password, PASSWORD_DEFAULT);
         try {
-            $updateStmt = $this->conn->prepare("UPDATE Usuario SET Password = :hashedPassword WHERE Email = :mail");
+            $updateStmt = $this->conn->prepare("UPDATE Usuario SET Contrasenya = :hashedPassword WHERE Email = :mail");
             $updateStmt->bindParam(':hashedPassword', $newHashedPassword);
             $updateStmt->bindParam(':mail', $mail);
             $updateStmt->execute();
@@ -223,7 +224,7 @@ class UserController
 
         $hashPassword = password_hash($password, PASSWORD_DEFAULT);
         try {
-            $stmt = $this->conn->prepare("INSERT INTO Usuario (`Nombre`, `Apellido`, `Email`, `Password`, `Imagen`, `Administrador`) VALUES (:name, :surname, :mail, :password, :icon, :admin)");
+            $stmt = $this->conn->prepare("INSERT INTO Usuario (`Nombre`, `Apellido`, `Email`, `Contrasenya`, `Imagen`, `Administrador`) VALUES (:name, :surname, :mail, :password, :icon, :admin)");
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':surname', $surname);
             $stmt->bindParam(':mail', $mail);
@@ -308,7 +309,7 @@ class UserController
         // Save in a variable the result of hash the password sended by the user
         $hashPassword = password_hash($password, PASSWORD_DEFAULT);
         try {
-            $stmt = $this->conn->prepare("UPDATE USUARIO SET Nombre = :name, Apellido = :surname, Password = :password WHERE Email = :mail");
+            $stmt = $this->conn->prepare("UPDATE USUARIO SET Nombre = :name, Apellido = :surname, Contrasenya = :password WHERE Email = :mail");
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':surname', $surname);
             $stmt->bindParam(':password', $hashPassword);

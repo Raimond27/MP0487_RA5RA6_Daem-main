@@ -55,7 +55,7 @@ class showProduct
     {
         $query = "SELECT p.*, CONCAT(ROUND(p.Precio - (p.Precio * p.Oferta / 100), 2), ' €') AS FinalPrice,
                   pp.Imagen, plt.id
-                  FROM PRODUCTO p
+                  FROM producto p
                   INNER JOIN producto_plataforma pp ON p.IdProducto = pp.id_producto
                   INNER JOIN plataforma plt ON pp.id_plataforma = plt.id
                   WHERE plt.nombre = :platform";
@@ -74,7 +74,7 @@ class showProduct
     {
         $query = "SELECT p.*, CONCAT(ROUND(Precio - (Precio * Oferta / 100), 2), ' €') AS FinalPrice,
                   pp.Imagen, plt.id 
-                  FROM PRODUCTO p
+                  FROM producto p
                   INNER JOIN producto_plataforma pp ON p.IdProducto = pp.id_producto
                   INNER JOIN plataforma plt ON pp.id_plataforma = plt.id
                   WHERE pp.Tendencia = 1";
@@ -92,7 +92,7 @@ class showProduct
     {
         $sql = "SELECT p.*, CONCAT(p.Oferta, '%') AS Offer, CONCAT(p.Precio, '€') AS Price, 
                 CONCAT(ROUND(p.Precio - (p.Precio * p.Oferta / 100), 2), '€') AS FinalPrice, pp.*, pl.*
-                FROM Producto p 
+                FROM producto p 
                 INNER JOIN producto_plataforma pp ON p.IdProducto = pp.id_producto
                 INNER JOIN plataforma pl ON pp.id_plataforma = pl.id
                 WHERE p.IdProducto = :idProduct AND pp.id_plataforma = :idPlaftorm";
@@ -111,7 +111,7 @@ class showProduct
 
     public function renderProductOptions()
     {
-        $stmt = $this->conn->prepare("SELECT idProducto, Nombre FROM PRODUCTO ORDER BY Nombre");
+        $stmt = $this->conn->prepare("SELECT idProducto, Nombre FROM producto ORDER BY Nombre");
         $stmt->execute();
         $productOptions = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $this->conn = null;

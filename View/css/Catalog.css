@@ -1,0 +1,84 @@
+.categories {
+  display: inline-block;
+  background-color: lightgray;
+  width: 30%;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: x-large;
+  margin-left: 19%;
+  margin-top: 50px;
+}
+.profile {
+  display: inline-block;
+  background-color: lightgray;
+  width: 30%;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: x-large;
+  margin-left: 2%;
+  margin-top: 50px;
+}
+.center {
+  display: inline-block;
+  height: 100%;
+  width: 0px;
+  vertical-align: middle;
+}
+#productsContainer {
+  width: 100%;
+}
+.product {
+  width: 30%;
+  display: inline-block;
+  background-color: #f57f51;
+  margin: 25px auto;
+  margin-left: 30px;
+  margin-right: 10px;
+  margin-top: 50px;
+  text-align: center;
+  height: 380px;
+  position: relative;
+}
+
+.catalog {
+  height: 200px;
+  width: auto;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.text {
+  font-family: Exo;
+  display: block;
+  text-align: center;
+  font-size: x-large;
+  padding-bottom: 20px;
+}
+.price-container {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  margin-top: 20px; /* Ajusta el margen superior si es necesario */
+}
+
+.percentage {
+  background-color: rgba(151, 151, 151, 0.9);
+  text-align: center;
+  color: red;
+  padding: 5px 10px; /* Añadido para padding interno */
+  margin-right: 10px; /* Espacio a la derecha para separar del precio */
+}
+
+.price-percentage {
+  background-color: rgba(151, 151, 151, 0.9);
+  text-align: center;
+  padding: 5px 10px; /* Añadido para padding interno */
+}
+.edit {
+  width: 85%;
+  text-align: center;
+  padding-top: 40px;
+  height: 149px;
+}

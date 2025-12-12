@@ -1,0 +1,114 @@
+.header-form {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 15px;
+  padding-bottom: 7px;
+  padding-left: 30px;
+}
+.account {
+  display: inline-block;
+}
+.account a {
+  text-decoration: none;
+  color: black;
+}
+.simbol {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.settings {
+  text-decoration: underline;
+  pointer-events: none;
+}
+
+.main {
+  display: absolute;
+  font-family: "Exo";
+  height: 65%;
+  width: calc(100% - 300px);
+  border-radius: 10px;
+  background-color: rgb(133, 129, 129, 0.9);
+  margin: auto;
+  padding: 50px;
+  padding-top: 5px;
+  margin-top: 20px;
+}
+
+.product-info {
+  justify-content: left;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+.nameProduct,
+.stockProduct,
+.priceProduct,
+.offer-price {
+  background-color: white;
+  border-bottom: 2px solid white;
+  border-radius: 200px;
+  position: relative;
+  width: auto;
+  margin: 10px 0;
+  padding-left: 5px;
+}
+
+.descriptionProduct {
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  width: auto;
+  margin: 10px 0;
+  padding-left: 5px;
+}
+
+.descriptionProduct textarea {
+  background-color: transparent;
+  border: 2px solid transparent;
+  width: 99%;
+  resize: none;
+}
+
+.platformProduct {
+  background-color: white;
+  border-bottom: 2px solid white;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.newImageUpload {
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.newImageUpload label,
+.newImageUpload input[type="file"] {
+  margin-left: 10px;
+  padding-bottom: 5px;
+}
+
+label[for="offer"] {
+  margin: 10px 0;
+  margin-right: 15px;
+}
+
+#offer-checkbox {
+  margin: 10px 0;
+  margin-bottom: 20px;
+}
+
+.send {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.create {
+  font-family: "Exo";
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #f57f51;
+  border-radius: 25px;
+}

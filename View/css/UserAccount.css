@@ -1,0 +1,74 @@
+.rectangle {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  margin-top: 5%;
+}
+
+.background {
+  /* Color de fondo con 50% de opacidad */
+  background-color: rgba(198, 66, 130, 0.5);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px; /* Espacio entre los elementos */
+  padding: 20px;
+}
+
+.rectangle img {
+  max-width: 25%;
+  max-height: 25%;
+}
+
+.rectangle > .background > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.delivery-data,
+.Account-data,
+.payment-data,
+.history-data {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.bottons {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+.logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  position: relative;
+  height: 50px;
+  border: 1px solid;
+  background-color: #f57f51;
+  border-radius: 25px;
+  font-size: 10px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  font-size: 14px;
+  font-family: "Exo";
+  font-weight: bold;
+}

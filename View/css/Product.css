@@ -1,0 +1,82 @@
+.main {
+  padding: 20px;
+  margin-top: 20px;
+}
+.emoticons {
+  width: 60px;
+  height: auto;
+}
+.product-information {
+  display: flex;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.product-images {
+  text-align: center;
+  width: 55%;
+}
+
+.product-image {
+  max-width: 55%;
+}
+
+.product-info {
+  text-align: center;
+  width: 70%;
+  margin-right: 20px;
+}
+
+.product-name {
+  margin-bottom: 40px;
+}
+
+.amount {
+  align-items: baseline;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.discounts {
+  text-decoration: line-through;
+  font-size: 18px;
+  color: #888;
+}
+.discounted {
+  color: red;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.total {
+  align-items: baseline;
+  font-size: 25px;
+  margin-left: 10px;
+}
+.button {
+  font-family: "Exo";
+  background-color: #fa4235;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.product-description {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#platformRadios label {
+  display: inline-block;
+  margin-right: 15px; /* Ajusta este valor según la separación que desees */
+}

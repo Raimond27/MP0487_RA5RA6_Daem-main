@@ -1,0 +1,195 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.redes {
+  height: 40px;
+  width: 40px;
+  margin: 20px;
+  border-radius: 5px;
+}
+.closeUser {
+  position: absolute;
+  top: calc(20% - 25px);
+  left: calc(63% - 25px);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closeAdmin {
+  position: absolute;
+  top: calc(16% - 25px);
+  left: calc(63% - 25px);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closeUser a,
+.closeAdmin a {
+  font-family: "Roboto Condensed";
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  border-radius: 10px;
+  background-color: #858181;
+}
+
+.form h1 {
+  text-align: center;
+  font-family: "Roboto";
+  padding: 0 0 20px;
+  border-bottom: 1px solid black;
+}
+
+.form form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.form .name,
+.form .surname,
+.form .email,
+.form .password {
+  font-family: "Exo";
+  background-color: white;
+  position: relative;
+  border-bottom: 2px solid;
+  border-radius: 5px;
+  margin: 30px 0;
+}
+
+.form .name input,
+.form .surname input,
+.form .email input,
+.form .password input {
+  background-color: transparent;
+  border: 0;
+}
+
+.record {
+  margin: -5px 0 20px 5px;
+  color: blue;
+  cursor: pointer;
+  padding-top: 20px;
+  text-align: right;
+}
+
+.record:hover {
+  text-decoration: underline;
+}
+
+#submit {
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background-color: #f57f51;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  font-family: "Exo";
+  font-weight: bold;
+}
+
+#submit:hover {
+  border-color: black;
+}
+
+.signup {
+  margin: 20px 0;
+  text-align: right;
+  font-size: 16px;
+  color: blue;
+  cursor: pointer;
+}
+
+.signup:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  font-family: "Exo";
+  margin-bottom: 15px;
+}
+
+#uploadFile {
+  font-family: "Exo";
+}
+
+/* POP UP MESSAGE */
+#overlay {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+#overlay.active {
+  display: block;
+}
+
+.popup {
+  display: none;
+  background: #fff;
+  padding: 20px;
+  width: calc(100% - 40px);
+  max-width: 600px;
+  line-height: 150%;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup.active {
+  display: block;
+}
+
+.popup-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close {
+  color: #fa4235;
+  font-size: xx-large;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+form {
+  margin-top: 20px;
+}
+
+#messageContent {
+  font-family: "Exo";
+}

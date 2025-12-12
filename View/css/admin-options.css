@@ -1,0 +1,18 @@
+.option-admin {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+}
+
+.adminOption,
+.optionPlus,
+.optionClose {
+  margin-left: 25px;
+  margin-bottom: 10px;
+  max-width: 45px;
+  max-height: 45px;
+}
+.hidden {
+  display: none;
+}
